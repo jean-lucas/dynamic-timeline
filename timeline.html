@@ -1,0 +1,56 @@
+
+
+<html>
+	<head>
+		<title>My Timeline</title>
+
+
+		<!-- google fonts --> 
+		<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato'/>  
+	
+		<!-- css -->
+		<link rel="stylesheet" href="timeLineStyle.css">
+
+
+		<!-- bootstrap -->
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'> 
+
+
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+		<script src="app.js"></script>
+
+
+	</head>
+
+
+	<body ng-app="timeLine_app">
+		
+
+		<section class="col-sm-12" id="section_wrapper" ng-controller="mainCtrl as mCtrl" >
+			
+
+
+
+			<div id="time_line_wrapper">
+				
+				<div id="time_line">
+
+					<!-- repeat for each timeline data object, and get its position for the timeline -->
+					<div ng-repeat="data in mCtrl.timeLineData"  class="time_line__marker" style="left: {{data.getleft()+'%'}} "> 
+						
+						<div class="time_line__decription"> {{data.info}} <br> {{data.place}} </div>
+
+					</div> 
+
+				</div> <!-- time_line -->
+
+			</div> <!-- time_line_wrapper -->
+
+		</section>
+	</body>
+</html>
+
+
+
+

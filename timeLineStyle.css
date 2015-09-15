@@ -1,0 +1,97 @@
+/* colors used  
+
+  $yellow: #F7B330;
+  $red: #E05037;
+  $dark_blueGray: #253939;
+  $bcg_gray: #E9EDBE;
+
+
+*/
+
+
+
+#section_wrapper {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: #253939; 
+}
+
+
+#time_line_wrapper {
+  position: relative;
+  top: 50%;
+  width: 90%;
+  height: 10em;
+  margin: 0 auto;
+}
+
+
+#time_line {
+  position: relative;
+  top: 50%;
+  height: 2px;
+  width: 100%;
+  border: 1px solid #F7B330;
+}
+
+
+/* the dot in the timeline */
+.time_line__marker {
+  position: absolute;
+  display: inline-block;
+  float: left;
+  background-color: #E9EDBE;
+  top: -0.5em;
+  height: 1em;
+  width: 1em;
+  border: 1px solid #F7B330;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+
+/*description box of each timeline dot */
+.time_line__decription {
+  display: none;
+  position: relative;
+  text-align: center;
+  font-family: "Lato";
+  top: 2em;
+  width: 10em;
+  left: -4.5em;
+  background-color: #E9EDBE;
+  color: #253939;
+  z-index: 1;
+  padding: 0.3em;
+  margin-bottom: 1em;
+  border-radius: 3px; 
+}
+
+/*description box arrow */
+.time_line__decription:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  left: 43%;
+  top: -5px;
+  border: 10px solid;
+  border-color: #E9EDBE transparent transparent #E9EDBE;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 0; 
+}
+
+
+/*show description box on dot hover */
+.time_line__marker:hover {
+  border: 2px solid #E05037; }
+  .time_line__marker:hover div {
+    display: block; 
+}
+
